@@ -74,7 +74,6 @@ MemoryRouter.route("/:id/commentMemory").post(
     }
 );
 MemoryRouter.route("/updateViewer").patch(
-    auth,
     async (req: Request, res: Response) => {
         const { memoryId } = req.body;
         const memory = await Memories.findById(memoryId);
